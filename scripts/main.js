@@ -71,4 +71,4 @@ const departments = {
     }
 }
 
-console.log(departments);
+console.log("De afdeling Sales heeft "+departments.sales.numberOfEmployees+" medewerkers");
