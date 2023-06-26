@@ -30,26 +30,3 @@ console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager. "
 let userInput = prompt('Over welke afdeling wil je meer informatie?\n' +
     'Kies uit: [marketing / sales / customer-service].');
 console.log(userInput);
-
-// // Opdracht 2b:
-// // Je koos [ingevoerde]. [beschrijving afdeling]"
-// // TODO: Kijken of dit nog wat mooier gemaakt kan worden?
-// let chosenInfo;
-// switch (userInput) {
-//     case "marketing":
-//         chosenInfo=departments.marketing.description
-//         break;
-//     case "sales":
-//         chosenInfo=departments.sales.description
-//         break;
-//     case "customer-service":
-//         chosenInfo=departments["customer-service"].description
-//         break;
-//     case "":
-//         userInput="niets";
-//     default:
-//         console.log("Sorry! Je hebt geen bruikbare info ingevoerd.");
-//         chosenInfo="Geen info!";
-// }
-// console.log("Je koos "+userInput+".\n"+ chosenInfo);
-
