@@ -50,23 +50,41 @@ switch (userInput) {
     default:
         console.log("Sorry! Je hebt geen bruikbare info ingevoerd.");
         chosenInfo="Geen info!";
+
+        document.getElementById('error-message').textContent = 'Sorry! Je hebt geen bruikbare info ingevoerd.\n' +
+            ' Probeer het opnieuw door de pagina te verversen.';
 }
 console.log("Je koos "+userInput+".\n"+ chosenInfo);
 
-console.log('------------>>>>>')
-console.log(departments[userInput].jobs)// Test following expression
 let departmJobs = departments[userInput].jobs;
 let sepJobLine =''
 let joblist =''
+let jobAmount
 
 for (let i in departmJobs) {
     sepJobLine = i+': '+departments[userInput].jobs[i].title+'\n';
     joblist = joblist+sepJobLine;
+    jobAmount = i;
 }
 
 let userInput2 = prompt('Je koos '+userInput+'marketing. Over welke functie wil je meer weten?\n'  +
-    'Voer een getal tussen 0 en 3 in.\n'+joblist+'')
+    'Voer een getal tussen 0 en '+jobAmount+' in.\n'+joblist+'');
 
-// console.log(joblist)
+console.log('------------>>>>>');
 
- // console.log(departments.marketing.jobs[0].title);
+let chosNumber =Number(userInput2);
+
+if (chosNumber >-1 && chosNumber <= jobAmount) {
+    console.log('Je koos '+departments[userInput].jobs[userInput2].title +'. Een uitdagende rol!');
+    console.log(departments[userInput].jobs[userInput2].description);
+
+    document.getElementById('role-title').textContent = departments[userInput].jobs[userInput2].title;
+    document.getElementById('department-description').textContent = departments[userInput].description;
+    document.getElementById('role-description').textContent = departments[userInput].jobs[userInput2].description;
+
+}else{
+    console.log('U heeft geen getal ingevoerd tussen 0 en '+jobAmount+'');
+
+    document.getElementById('error-message').textContent = 'Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.';
+
+}
