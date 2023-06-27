@@ -63,11 +63,10 @@ for (let i in departmJobs) {
     sepJobLine = i+': '+departments[userInput].jobs[i].title+'\n';
     joblist = joblist+sepJobLine;
 }
-//
-// let userInput2 = prompt('Je koos '+userInput+'marketing. Over welke functie wil je meer weten?\n'  +
-//     'Voer een getal tussen 0 en 3 in.\n'+joblist)
-//
-console.log(joblist)
 
+let userInput2 = prompt('Je koos '+userInput+'marketing. Over welke functie wil je meer weten?\n'  +
+    'Voer een getal tussen 0 en 3 in.\n'+joblist+'')
+
+// console.log(joblist)
 
  // console.log(departments.marketing.jobs[0].title);
