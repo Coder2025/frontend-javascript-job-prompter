@@ -18,8 +18,8 @@ console.log("De afdeling Customer Service heeft "+departments["customer-service"
 console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager. "+departments.sales.jobs[1].description);
 
 // prompt-methode
-const userInput = prompt('Hoi! Hoe heet je?');
-console.log(userInput);
+// const userInputA = prompt('Hoi! Hoe heet je?');
+// console.log(userInputA);
 
 // Opdracht 2a: Gebruik bovenstaand voorbeeld en pas het zo aan dat de browser jou de volgende vraag stelt:
 // Over welke afdeling wil je meer informatie?
